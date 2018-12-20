@@ -1,0 +1,45 @@
+<div data-options="dxView : { name: 'relArgCliente', title: 'Clientes' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="loadpanel" data-bind="dxLoadPanel: loadOptions"></div>
+
+        <div data-bind="dxDeferRendering: { renderWhen: $root.infoIsReady,
+                                                    animation: 'fade',
+                                                    showLoadIndicator: true }" style="width: 100%; height: 100%;">
+
+            <div data-bind="dxPivot: pivotOptions">
+                <div data-options="dxTemplate: { name: 'customTitleTemplate' }">
+                    <div style="font-size: large" data-bind="text: title"></div>
+                </div>
+                <div class="dx-searchbar">
+                    <div data-bind="dxTextBox: searchOptions"></div>
+                </div>
+                <div class="s4t-dxlistclientes" data-bind="dxList: listClientesOptions">
+                    <div data-options="dxTemplate: { name: 'nome' }" style="padding: 8px;" data-bind="dxAction: $root.onClienteClick">
+                        <span data-bind="text: A1_NOME" style="display: block"></span>
+                        <span data-bind="text: A1_LOJA_DISP"></span>
+                        <span data-bind="text: A1_END" style="display: block; float:right;"></span>
+                    </div>
+
+                    <div data-options="dxTemplate: { name: 'codigo' }" style="padding: 8px;" data-bind="dxAction: $root.onClienteClick">
+                        <span data-bind="text: A1_NOME" style="display: block"></span>
+                        <span data-bind="text: A1_LOJA_DISP"></span>
+                        <span data-bind="text: A1_COD" style="display: block; float:right;"></span>
+                    </div>
+
+                    <div data-options="dxTemplate: { name: 'cnpj' }" style="padding: 8px;" data-bind="dxAction: $root.onClienteClick">
+                        <span data-bind="text: A1_NOME" style="display: block"></span>
+                        <span data-bind="text: A1_LOJA_DISP"></span>
+                        <span data-bind="text: A1_CGC_DISP" style="display: block; float:right;"></span>
+                    </div>
+
+                    <div data-options="dxTemplate: { name: 'endereco' }" style="padding: 8px;" data-bind="dxAction: $root.onClienteClick">
+                        <span data-bind="text: A1_NOME" style="display: block"></span>
+                        <span data-bind="text: A1_LOJA_DISP"></span>
+                        <span data-bind="text: A1_END" style="display: block; float:right;"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

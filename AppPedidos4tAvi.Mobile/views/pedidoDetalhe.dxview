@@ -1,0 +1,215 @@
+<div data-options="dxView : { name: 'pedidoDetalhe', title: 'Pedidos ONLINE' } ">
+    <div class="navigation" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="loadpanel" data-bind="dxLoadPanel: loadOptions"></div>
+
+        <div data-bind="with: modelProdutoAtual">
+            <div class="popup" data-bind="dxPopup: $root.popupObsProdOptions">
+                <div data-options="dxTemplate: { name:'title' }">
+                    <span style="font-size: 16px; font-weight: bold;" data-bind="text: B1_DESC"></span>
+                </div>
+
+                <div data-options="dxTemplate: { name: 'content' }">
+                    <div data-bind="dxTextArea: $root.textareaObsProdOptions($data)"></div>
+                    <hr style="height:2pt; visibility:hidden;" />
+                    <div style="text-align:center;">
+                        <div data-bind="dxButton: $root.buttonObsProdFecharOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" data-bind="dxPopup: $root.popupDataEntregaOptions">
+            <div data-options="dxTemplate: { name:'title' }">
+                <span style="font-size: 16px; font-weight: bold;">ATENÇÃO</span>
+            </div>
+
+            <div data-options="dxTemplate: { name: 'content' }" style="text-align:center;">
+                <span style="font-size: 14px; text-align:center;">Somente preencher esta informação se o pedido for entrega programada</span>
+                <br />
+                <br />
+                <div style="text-align:center;">
+                    <div data-bind="dxButton: $root.buttonDataEntregaFecharOptions"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" data-bind="dxPopup: $root.popupErrorServerOptions">
+            <div data-options="dxTemplate: { name:'title' }">
+                <span style="font-size: 16px; font-weight: bold;">PEDIDO NÃO REGISTRADO</span>
+            </div>
+
+            <div data-options="dxTemplate: { name: 'content' }" style="text-align:center;">
+                <span style="font-size: 14px; text-align:center;">Erro: Serviço Protheus de recepção de pedidos falhou.</span>
+                <br />
+                <br />
+                <div style="text-align:center;">
+                    <div data-bind="dxButton: $root.buttonErrorServerFecharOptions"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div data-bind="dxDeferRendering: { renderWhen: $root.infoIsReady,
+                                                    animation: 'fade',
+                                                    showLoadIndicator: true }" style="width: 100%; height: 100%;">
+            <div class="navbar-wrapper">
+                <div data-bind="dxNavBar: navbarOptions"></div>
+            </div>
+            <div data-bind="dxScrollView: { height: '85%' }">
+                <span class="s4t-nomecliente-pedido" data-bind="text: nomeClienteDisp"></span>
+                <!-- ko if: navbar.selectedIndex() == 0 -->
+                <div class="s4t-accordion-item-body" data-bind="dxAccordion: accordionOptions">
+                    <div class="s4t-accordion-item-title" data-options="dxTemplate : { name: 'title' } ">
+                        <span class="s4t-accordion-title" data-bind="text: B1_GRUPO_DESC"></span>
+                        <span class="float-right" data-bind="text: totalGrupoCaixaDispReais"></span>
+                    </div>
+
+                    <div style="padding: 0px 16px 0px;" data-options="dxTemplate : { name: 'item' } ">
+                        <div data-bind="dxList: $root.listOptions($data)">
+                            <div class="s4t-lista-produtos" data-bind="style: { 'background-color': styleBackColor }" data-options="dxTemplate : { name: 'item' } ">
+
+                                <span data-bind="text: ZZO_DESCRI_DISP"></span>
+                                <span class="italic" data-bind="text: B1_COD"></span>
+                                <br />
+                                <div class="float-left" data-bind="dxNumberBox: $root.numberboxQuantOptions($data)"></div>
+                                <span class="float-left" style="margin-top: 6px; margin-left:15px;" data-bind="text: PRECO_CAIXA_DISP_REAIS"></span>
+
+                                <span class="float-right s4t-textosubtotal-produto" data-bind="text: prodTotalCaixaComputedDispReais"></span>
+                                <div data-bind="css: { 'button-obs-prod-on': prodObs() !== '', 'button-obs-prod-off': prodObs() == '' }">
+                                    <div data-bind="dxButton: $root.buttonObsProdOptions"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: navbar.selectedIndex() == 1 -->
+                <div style="width: 95%; margin: auto;">
+                    <span class="float-left" style="margin-top:3px;">RESUMO PEDIDO&nbsp;</span>
+                    <span class="float-left" style="margin-top:3px;" data-bind="text: numeroPedidoDisp"></span>
+                    <div class="float-right s4t-switchst" data-bind="dxButton: buttonSwitchIcmsStOptions"></div>
+
+                    <table style="width: 100%; font-size: 12px;">
+                        <tr style="font-weight:bold; border: 1px solid black;">
+                            <td align="left">Produto</td>
+                            <td align="center">Quant.</td>
+                            <td align="right">Total</td>
+                        </tr>
+
+                        <tbody data-bind="foreach: pedidoResumoArray">
+                            <tr style="border: 1px solid black;">
+                                <td align="left" data-bind="text: B1_DESC"></td>
+                                <td align="center" data-bind="text: prodQuant"></td>
+                                <td align="right" data-bind="text: prodTotalDisplay"></td>
+                            </tr>
+                        </tbody>
+                        <tr><td colspan="2"><br /></td></tr>
+                        <tr>
+                            <td align="left">VALOR ICMS ST</td>
+                            <td align="center"></td>
+                            <td align="right" data-bind="text: $root.pedidoResumoValorIcmsStDisp"></td>
+                        </tr>
+
+                        <tr style="font-weight:bold;">
+                            <td align="left">TOTAL DO PEDIDO</td>
+                            <td align="center"></td>
+                            <td align="right" data-bind="text: $root.pedidoResumoValorTotalCaixaDisp"></td>
+                        </tr>
+
+                        <tr style="font-weight:bold;">
+                            <td align="left">TOTAL DO PEDIDO COM ST</td>
+                            <td align="center"></td>
+                            <td align="right" data-bind="text: $root.pedidoResumoValorTotalComIcmsStDisp"></td>
+                        </tr>
+                    </table>
+
+                    <div data-bind="visible: pedidoResumoExiste">
+                        <div data-bind="dxDateBox: dateboxDataEntregaOptions"></div>
+                        <div data-bind="dxTextBox: textboxPedidoNumeroClienteOptions"></div>
+                        <div data-bind="dxTextArea: textareaPedidoObservacaoOptions"></div>
+                        <br />
+                        <div data-bind="visible: pedidoEstouroCota" style="background-color: #F08080"><span><b>ESTOURO DE COTA</b></span></div>
+                        <div data-bind="visible: !pedidoEstouroCota()">
+                            <div data-bind="visible: mostrarConformeTipoOperacao">
+                                <div data-bind="visible: $root.deveSalvarEmAberto">
+                                    <div class="float-left" data-bind="dxButton: buttonSalvarAbertoOptions"></div>
+                                </div>
+                                <div data-bind="visible: $root.deveFecharEnviar">
+                                    <div class="float-right" data-bind="dxButton: buttonFecharEnviarOptions"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: navbar.selectedIndex() == 2 -->
+                <div style="width: 95%; margin: auto;">
+                    <div class="s4t-titulo-info-cliente">
+                        <span style="font-size: 16px; font-weight: bold;">ANÁLISE DO CLIENTE</span>
+                    </div>
+                    <table style="width: 100%; font-size: 16px;">
+                        <tr style="font-weight:bold;">
+                            <td align="left">Indicador</td>
+                            <td align="right">Conteúdo</td>
+                        </tr>
+                        <tr>
+                            <td align="left">Tabela Preço</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_TABELA"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Condição Pagto</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_COND"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Média Atraso</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_METR"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Número Compras</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_NROCOM"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Última Compra</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_ULTCOM_DISP"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Saldo Títulos</td>
+                            <td align="right" data-bind="text: clienteInfo().A1_SALDUP_DISP"></td>
+                        </tr>
+                    </table>
+
+                    <div class="s4t-titulo-info-cliente">
+                        <span style="font-size: 16px; font-weight: bold;">ÚLTIMAS COMPRAS</span>
+                    </div>
+                    <div class="s4t-accordion-item-body" data-bind="dxAccordion: accordionNFsVendaOptions">
+                        <div class="s4t-accordion-info-cliente-item-title" data-options="dxTemplate : { name: 'title' } ">
+                            <span class="s4t-accordion-info-cliente-title" data-bind="text: pDATA_EMISSAO_DISP"></span>
+                            <span class="s4t-accordion-info-cliente-title" data-bind="text: pNUMERO_NF_DISP"></span>
+                            <span class="s4t-accordion-info-cliente-title float-right" data-bind="text: pTOTAL_VL_PRODUTO_DISP"></span>
+                        </div>
+
+                        <div data-options="dxTemplate : { name: 'item' } ">
+                            <table style="width: 100%; font-size: 12px;">
+                                <tr style="font-weight:bold;">
+                                    <td align="left">Produto</td>
+                                    <td align="center">Quant.</td>
+                                    <td align="right">Total</td>
+                                </tr>
+
+                                <tbody data-bind="foreach: items">
+                                    <tr>
+                                        <td align="left" data-bind="text: pDESCRICAO"></td>
+                                        <td align="center" data-bind="text: pTOTAL_QTD_CX_DISP"></td>
+                                        <td align="right" data-bind="text: pTOTAL_VL_PRODUTO_DISP"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
+

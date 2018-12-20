@@ -1,0 +1,8 @@
+<div data-options="dxView : { name: 'relArgParamDiaFinal' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div style="display: table; margin: 0 auto;" data-bind="dxCalendar: calendarOptions"></div>
+        <div style="width:100%">
+            <div style="display: table; margin: 0 auto; background-color: #ffcc66;" data-bind="dxButton: buttonOptions"></div>
+        </div>
+    </div>
+</div>

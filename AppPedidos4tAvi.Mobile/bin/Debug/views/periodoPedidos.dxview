@@ -1,0 +1,10 @@
+<div data-options="dxView : { name: 'periodoPedidos', title: 'Período' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxDateBox: dateboxDataInicialOptions"></div>
+        <br />
+        <div data-bind="dxDateBox: dateboxDataFinalOptions"></div>
+        <div>
+            <div class="s4t-centerdiv" data-bind="dxButton: buttonPesquisarOptions"></div>
+        </div>
+    </div>
+</div>

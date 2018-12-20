@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'relArgClientePeriodoEmissaoVencimento' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div style="display: table; margin: 0 auto;"><span>Selecione Períodos</span></div>
+
+        <div class="dx-fieldset">
+            <div class="dx-fieldset-header">Data Emissão</div>
+            <div class="dx-field">
+                <div class="dx-field-label">Inicial</div>
+                <div class="dx-field-value" data-bind="dxDateBox: dateboxDataEmissaoInicialOptions"></div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Final</div>
+                <div class="dx-field-value" data-bind="dxDateBox: dateboxDataEmissaoFinalOptions"></div>
+            </div>
+
+            <div class="dx-fieldset-header">Data Vencimento</div>
+            <div class="dx-field">
+                <div class="dx-field-label">Inicial</div>
+                <div class="dx-field-value" data-bind="dxDateBox: dateboxDataVencimentoInicialOptions"></div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Final</div>
+                <div class="dx-field-value" data-bind="dxDateBox: dateboxDataVencimentoFinalOptions"></div>
+            </div>
+        </div>
+        <div>
+            <div class="s4t-centerdiv" data-bind="dxButton: buttonPesquisarOptions"></div>
+        </div>
+    </div>
+</div>

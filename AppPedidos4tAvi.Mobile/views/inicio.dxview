@@ -1,0 +1,38 @@
+<div data-options="dxView : { name: 'inicio', title: 'Laticínios Aviação' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxBox: { direction: 'col',
+                                height: '100%',
+                                width: '90%',
+                                crossAlign: 'center' }">
+            <div data-options="dxItem: { baseSize: 0, ratio: 1 }">
+                <div>
+                    <img src="images/logo.png" />
+                </div>
+            </div>
+            <div data-options="dxItem: { baseSize: 0, ratio: 2  }">
+                <div data-bind="dxDeferRendering: { renderWhen: $root.loginInfoIsReady,
+                                                    animation: 'fade',
+                                                    showLoadIndicator: true }">
+                    <div data-bind="visible: $root.perfilVendedor">
+                        <span>Vendedor:</span><br />
+                        <span data-bind="text: $root.nomeVendedor"></span>
+                    </div>
+                    <div data-bind="visible: $root.perfilSubVendedor">
+                        <div>
+                            <span>Vendedor Vinculado:</span><br />
+                            <span data-bind="text: $root.nomeVendedorVinculado"></span>
+                        </div>
+                        <div>
+                            <span>Sub Vendedor:</span><br />
+                            <span data-bind="text: $root.codigoSubVendedor"></span>
+                        </div>
+                    </div>
+                    <div data-bind="visible: $root.perfilAprovador">
+                        <span>Aprovador:</span><br />
+                        <span data-bind="text: $root.nomeAprovador"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div data-options="dxView : { name: 'liberacaoDetalhe', title: 'Liberação Detalhe' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="loadpanel" data-bind="dxLoadPanel: loadOptions"></div>
+
+        <div data-bind="dxDeferRendering: { renderWhen: $root.infoIsReady,
+                                                    animation: 'fade',
+                                                    showLoadIndicator: true }" style="width: 100%; height: 100%;">
+
+            <div data-bind="dxScrollView: { height: '85%' }">
+                <div data-bind="dxForm: formOptions"></div>
+
+                <!--<hr style="height:0.1em; visibility:hidden;" />-->
+
+                <table style="width: 100%; font-size: 12px;">
+                    <tr style="font-weight:bold;">
+                        <td align="left">Produto</td>
+                        <td align="center">Quant.</td>
+                        <td align="center">Un</td>
+                        <td align="right">Total</td>
+                    </tr>
+
+                    <tbody data-bind="foreach: pedidoDetalheArray">
+                        <tr>
+                            <td align="left" style="width: 55%;" data-bind="text: B1_DESC"></td>
+                            <td align="center" data-bind="text: C7_QUANT_DISP"></td>
+                            <td align="center" data-bind="text: C7_UM"></td>
+                            <td align="right" data-bind="text: C7_TOTAL_DISP"></td>
+                        </tr>
+                    </tbody>
+                    <tr><td colspan="4"><br /></td></tr>
+
+                    <tr style="font-weight:bold;">
+                        <td align="left">TOTAL DO PEDIDO</td>
+                        <td align="center"></td>
+                        <td align="center"></td>
+                        <td align="right" data-bind="text: $root.valorTotal"></td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+            <div class="navbar-wrapper">
+                <div class="layout-footer" data-bind="dxNavBar: navbarOptions"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div data-options="dxView : { name: 'login', title: 'Autenticação' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="loadpanel" data-bind="dxLoadPanel: loadOptions"></div>
+
+        <div class="dx-fieldset">
+            <div class="dx-fieldset-header">INFORME SUAS CREDENCIAIS</div>
+            <div class="dx-field">
+                <div class="dx-field-label">Usuário</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox:{ value: username }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label">Senha</div>
+                <div class="dx-field-value">
+                    <div data-bind="dxTextBox: { value: password, mode: 'password' }"></div>
+                </div>
+            </div>
+            <div class="dx-field">
+                <div class="dx-field-label"></div>
+                <div class="dx-field-value">
+                    <div data-bind="dxButton: { onClick: loginClick, text: 'Entrar' }"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

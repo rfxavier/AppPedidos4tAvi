@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0e3020a0-f0bb-4595-b443-af2c35c929a8</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <Name>Shared</Name>
+    <RootNamespace>AppPedidos4tAvi</RootNamespace>
+    <UpgradeNotifyShown>17.2.6</UpgradeNotifyShown>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="apppedidos4tavi.shared.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\jquery-ui\jquery-ui.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\jquery-ui\themes\base\jquery-ui.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\report-designer-dark.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\report-designer-dark.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\report-designer-light.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\report-designer-light.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\web-document-viewer-dark.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\web-document-viewer-dark.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\web-document-viewer-light.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\css\web-document-viewer-light.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\html\report-designer.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\html\web-document-viewer.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\dx-designer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\dx-designer.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\report-designer.de.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\report-designer.en.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\report-designer.ja.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\report-designer.ru.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\web-document-viewer.de.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\web-document-viewer.en.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\web-document-viewer.ja.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\localization\web-document-viewer.ru.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\report-designer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\report-designer.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\web-document-viewer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="bower_components\xtrareportsjs\js\web-document-viewer.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\main\pt\ca-gregorian.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\main\pt\currencies.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\main\pt\numbers.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\supplemental\currencyData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\supplemental\likelySubtags.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\supplemental\numberingSystems.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\supplemental\timeData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="cldr\supplemental\weekData.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\4t.main.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\viewer.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\db.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\logo.png" />
+    <Content Include="js\appUtils4t.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dx.all.js" />
+    <Content Include="js\dx.all.debug.js" />
+    <Content Include="js\dx.webapi.client.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\dx.webapi.client.oauth.complete.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\localization\dx.messages.ru.js" />
+    <Content Include="js\localization\dx.messages.ja.js" />
+    <Content Include="js\localization\dx.messages.en.js" />
+    <Content Include="js\localization\dx.messages.de.js" />
+    <Content Include="js\localization\dx.all.de.js" />
+    <Content Include="js\localization\dx.all.ja.js" />
+    <Content Include="js\localization\dx.all.ru.js" />
+    <Content Include="js\cldr.min.js" />
+    <Content Include="js\cldr\event.min.js" />
+    <Content Include="js\cldr\supplemental.min.js" />
+    <Content Include="js\globalize\number.min.js" />
+    <Content Include="js\globalize\date.min.js" />
+    <Content Include="js\globalize\message.min.js" />
+    <Content Include="js\globalize\currency.min.js" />
+    <Content Include="js\globalize.min.js" />
+    <Content Include="js\jquery-1.12.3.min.js" />
+    <Content Include="js\jquery-2.2.3.min.js" />
+    <Content Include="js\knockout-3.4.0.js" />
+    <Content Include="css\dx.spa.css" />
+    <Content Include="css\dx.win10.white.css " />
+    <Content Include="css\dx.common.css" />
+    <Content Include="css\dx.contrast.compact.css" />
+    <Content Include="css\dx.contrast.css" />
+    <Content Include="css\dx.dark.compact.css" />
+    <Content Include="css\dx.light.compact.css" />
+    <Content Include="css\dx.dark.css" />
+    <Content Include="css\dx.light.css" />
+    <Content Include="css\dx.android5.light.css" />
+    <Content Include="css\dx.ios7.default.css" />
+    <Content Include="css\dx.win8.black.css" />
+    <Content Include="css\dx.win8.white.css" />
+    <Content Include="css\dx.win10.black.css" />
+    <Content Include="css\dx.win10.white.css" />
+    <Content Include="css\icons\dxicons.eot" />
+    <Content Include="css\icons\dxicons.ttf" />
+    <Content Include="css\icons\dxicons.woff" />
+    <Content Include="css\icons\dxiconsios.eot" />
+    <Content Include="css\icons\dxiconsios.ttf" />
+    <Content Include="css\icons\dxiconsios.woff" />
+    <Content Include="localization\dx.all.pt.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="oauthcomplete.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\about.html" />
+    <Content Include="views\blank.html" />
+    <Content Include="views\dxconfirmexternal.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\dxconfirmexternal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\dxregister.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\dxregister.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\dxsignin.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\dxsignin.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bower_components\" />
+    <Folder Include="bower_components\jquery-ui\" />
+    <Folder Include="bower_components\jquery-ui\themes\" />
+    <Folder Include="bower_components\jquery-ui\themes\base\" />
+    <Folder Include="bower_components\xtrareportsjs\" />
+    <Folder Include="bower_components\xtrareportsjs\css\" />
+    <Folder Include="bower_components\xtrareportsjs\html\" />
+    <Folder Include="bower_components\xtrareportsjs\js\" />
+    <Folder Include="bower_components\xtrareportsjs\js\localization\" />
+    <Folder Include="cldr\" />
+    <Folder Include="cldr\main\" />
+    <Folder Include="cldr\main\pt\" />
+    <Folder Include="cldr\supplemental\" />
+    <Folder Include="css\" />
+    <Folder Include="css\icons\" />
+    <Folder Include="data\" />
+    <Folder Include="images\" />
+    <Folder Include="js\" />
+    <Folder Include="js\cldr\" />
+    <Folder Include="js\globalize\" />
+    <Folder Include="js\localization\" />
+    <Folder Include="localization" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>

@@ -1,0 +1,137 @@
+﻿.s4t-centerdiv {
+    display: table;
+    margin: 0 auto;
+}
+
+table#tabelaPedidos {table-layout: fixed; width:95%; font-size:12px!important;}
+#tabelaPedidos tr td {word-wrap: break-word; overflow-wrap: break-word; white-space: pre-wrap!important;}
+
+table#tabelaPedidosLib {table-layout: fixed; width:95%; font-size:12px!important;}
+#tabelaPedidosLib tr td {word-wrap: break-word; overflow-wrap: break-word; white-space: pre-wrap!important; line-height: 1.2em}
+
+.s4t-list-header .dx-list-group-header {
+    padding: 2px 16px 0px 16px;
+}
+.s4t-texteditor .dx-texteditor-container {
+    margin: 0px 0px;
+}
+.s4t-textosubtotal-produto {
+    margin-top: 6px;
+}
+.s4t-textopreco-produto {
+    margin-top: 6px;
+    margin-left: 15px;
+}
+.s4t-accordion-title {
+    font-size: 22px; 
+    font-weight: bold;
+}
+.s4t-pivot-title {
+    font-size: 20px;
+}
+.s4t-accordion-item-body .dx-accordion-item-body {
+    padding-top: 0px;
+}
+.s4t-accordion-info-cliente-title {
+    font-size: 14px; 
+    font-weight: normal;
+    color: black;
+}
+.s4t-list-item-content .dx-list-item-content {    
+    padding: 0px 0px;/* vertical space between items */
+}
+.dx-list-item-content:after {
+    margin-top: 0; /* vertical space below the horizontal line */
+    height: 0px;  /* horizontal line's height */
+}
+.s4t-accordion-item-title {
+    height: auto; 
+    overflow:auto; 
+    padding: 4px 6px;
+}
+.s4t-accordion-info-cliente-item-title {
+    height: auto; 
+    overflow:auto; 
+    padding: 0px 0px;
+}
+.s4t-accordion-item-grupo-descr {
+    font-size: 22px; 
+    font-weight: bold;
+}
+.s4t-nomecliente-pedido {
+    font-size: 18px;
+    font-weight: bold;
+}
+.s4t-lista-produtos {
+    height: auto; 
+    padding: 0px;
+    display: block;
+}
+.button-obs-prod-on .dx-icon {
+    font-size: large!important;
+    background-color: goldenrod!important;
+}
+.button-obs-prod-off .dx-icon {
+    font-size: large!important;
+    background-color: white!important;
+}
+.s4t-switchst.dx-button {
+    min-height: 0;
+}
+.s4t-switchst .dx-button-content {
+    padding-top: 0;
+    margin-top: -2px;
+}
+.float-left {
+    float:left;
+}
+.float-right {
+    float:right;
+}
+.italic {
+    font-style:italic;
+}
+.s4t-dxlistclientes {
+    position: absolute;
+    bottom: 0;
+    top: 42px;
+    width: 100%;
+    height: auto;
+}
+.s4t-dxlistpedidos {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.s4t-titulo-info-cliente {
+    border-top: solid; 
+    border-top-width: 1px; 
+    border-bottom: solid; 
+    border-bottom-width: 1px;
+}
+
+.slideout-layout .layout-footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.s4t-inputdisabled .dx-texteditor-input {
+    color: rgb(0, 0, 0)!important;
+}
+
+#checkboxPedCompra .dx-checkbox-icon{
+    height: 26px;
+    width: 26px;
+    margin-top: 4px;
+}
+.s4t-dxlistrelatorios {
+    font-size: medium;
+    font-style: italic;
+}
+.s4t-titulo-arg-relatorio {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}

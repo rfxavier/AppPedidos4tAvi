@@ -1,0 +1,9 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+
+<div data-options="dxView : { name: 'relViewParamDia', title: 'Relatório' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div class="documentViewer" data-bind="dxReportViewer: { viewerModel: viewerModel, callbacks: callbacks, isMobile: true, readerMode: true }">
+            <span>Carregando...</span>
+        </div>
+    </div>
+</div>

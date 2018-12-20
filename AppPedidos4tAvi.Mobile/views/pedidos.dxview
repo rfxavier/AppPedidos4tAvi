@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'pedidos', title: 'Pedidos' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div data-bind="dxCommand: commandPesquisarPedidoOptions"></div>
+        <div data-bind="dxCommand: commandNovoPedidoOptions"></div>
+
+        <div data-bind="dxDeferRendering: { renderWhen: $root.infoIsReady,
+                                                    animation: 'fade',
+                                                    showLoadIndicator: true }" style="width: 100%; height: 100%;">
+
+            <div class="s4t-list-header s4t-dxlistpedidos" data-bind="dxList: listOptions">
+                <div data-options="dxTemplate : { name: 'grupoStatus' } ">
+                    <span style="font-size: 16px;" data-bind="text: pFlgStatusDisp"></span>
+                </div>
+
+                <div data-options="dxTemplate : { name: 'item' }" style="padding: 0px 4px 0px 10px;">
+                    <table id="tabelaPedidos">
+                        <tr>
+                            <td align="left" style="width: 75%;" data-bind="text: pA1_NOME_DISP"></td>
+                            <td align="right" data-bind="text: pNumeroItensDisp"></td>
+                        </tr>
+                        <tr>
+                            <td align="left" data-bind="text: pDataEmissaoDisp"></td>
+                            <td align="right" data-bind="text: pValorTotalDispReais"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div data-bind="dxActionSheet: actionSheetOptions"></div>
+    </div>
+</div>

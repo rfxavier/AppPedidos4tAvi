@@ -1,0 +1,9 @@
+<div data-options="dxView : { name: 'relArgClienteStatusTitulos' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+        <div style="display: table; margin: 0 auto;"><span>Selecione Status Títulos</span></div>
+        <div style="display: table; margin: 0 auto;" data-bind="dxRadioGroup: radioGroupOptions"></div>
+        <div style="width:100%">
+            <div style="display: table; margin: 0 auto; background-color: #ffcc66;" data-bind="dxButton: buttonOptions"></div>
+        </div>
+    </div>
+</div>

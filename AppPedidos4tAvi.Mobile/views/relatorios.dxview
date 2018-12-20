@@ -1,0 +1,11 @@
+<div data-options="dxView : { name: 'relatorios', title: 'Relatórios' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " class="dx-content-background">
+
+        <div data-bind="dxList: listOptions">
+            <div data-options="dxTemplate : { name: 'item' }">
+                <span class ="s4t-dxlistrelatorios" data-bind="text: tituloRelatorio"></span>
+            </div>
+        </div>
+
+    </div>
+</div>

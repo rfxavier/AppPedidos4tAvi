@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6010785f-61e3-41e2-8ed0-0bfaeb344cf9</ProjectGuid>
+    <AutoAssignPort>True</AutoAssignPort>
+    <RunInSimulator>True</RunInSimulator>
+    <UploadPluginsToTheCourier>True</UploadPluginsToTheCourier>
+    <RootNamespace>AppPedidos4tAvi</RootNamespace>
+    <ApplicationPage>index.html</ApplicationPage>
+    <Name>AppPedidos4tAvi.Mobile</Name>
+    <DebugSitePortNumber>50000</DebugSitePortNumber>
+    <UseWebDev>False</UseWebDev>
+    <DefaultDevice>androidPhone</DefaultDevice>
+    <DeviceOrientation>Portrait</DeviceOrientation>
+    <DisplayUnhandledExceptions>True</DisplayUnhandledExceptions>
+    <UpgradeNotifyShown>17.2.6</UpgradeNotifyShown>
+    <KeyApkPath>certificates\android_certificate.p12</KeyApkPath>
+    <VersionCode>1</VersionCode>
+    <TemplateFileApk />
+    <UseCustomTemplateNameApk>False</UseCustomTemplateNameApk>
+    <ApkDexFilePackageName>com.devextreme.AppPedidos4tAvi.Mobile</ApkDexFilePackageName>
+    <KeyDebuggable>True</KeyDebuggable>
+    <KeyIpaPath>certificates\ios_certificate.p12</KeyIpaPath>
+    <ProvisionProfile>certificates\AppPedidos4tAvi2018.mobileprovision</ProvisionProfile>
+    <IpaPrivateKeyFile>certificates\ios_private_key.txt</IpaPrivateKeyFile>
+    <TemplateFileIpa />
+    <UseCustomTemplateNameIpa>False</UseCustomTemplateNameIpa>
+    <IpaDevicesFamily>Universal</IpaDevicesFamily>
+    <BundleIdentifier>com.4tforcavendasavipub</BundleIdentifier>
+    <IpaSupportedLanguages />
+    <KeyApkAlias>tmpl</KeyApkAlias>
+    <ScreenOrientation>Portrait</ScreenOrientation>
+    <ApplicationTitle>Força Vendas</ApplicationTitle>
+    <VersionPackage>1.6.0.0</VersionPackage>
+    <ShowSplashScreen>True</ShowSplashScreen>
+    <PackagePublisherID>8ed1ad0f-548a-4097-ac8d-92d4c14794ce</PackagePublisherID>
+    <AppxPackageProductID>d190d508-c646-482d-ba85-02cb95d7addf</AppxPackageProductID>
+    <KeyPackageIdentityPublisher>CN=8ed1ad0f-548a-4097-ac8d-92d4c14794ce</KeyPackageIdentityPublisher>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="apppedidos4tavi.config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html" />
+    <Content Include="index.css" />
+    <Content Include="cordova.js" />
+    <Content Include="views\periodoPedidos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\periodoPedidos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgCliente.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgCliente.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteDiaFinal.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteDiaFinal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteDiaInicial.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteDiaInicial.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClientePeriodoEmissaoVencimento.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClientePeriodoEmissaoVencimento.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteStatusTitulos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relArgClienteStatusTitulos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relViewClienteDiaInicialFinal.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relViewClienteDiaInicialFinal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relViewClientePeriodoEmissaoVencimento.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatoriosCliente\relViewClientePeriodoEmissaoVencimento.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDia.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDia.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDiaFinal.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDiaFinal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDiaInicial.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relArgParamDiaInicial.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relViewParamDia.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relViewParamDia.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relViewParamDiaInicialFinal.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\relatorios\relViewParamDiaInicialFinal.js">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="certificates\android_certificate.p12" />
+    <None Include="certificates\ios_certificate.cer" />
+    <None Include="certificates\ios_certificate.p12" />
+    <None Include="certificates\ios_certificate_request.txt" />
+    <None Include="certificates\ios_private_key.txt" />
+    <None Include="config.xml" />
+    <Content Include="index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-1.12.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\jquery-2.2.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="js\knockout-3.4.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="layouts\Navbar\NavbarLayout.css" />
+    <Content Include="layouts\Navbar\NavbarLayout.html" />
+    <Content Include="layouts\Navbar\NavbarLayout.js" />
+    <Content Include="layouts\Pivot\PivotLayout.css" />
+    <Content Include="layouts\Pivot\PivotLayout.html" />
+    <Content Include="layouts\Pivot\PivotLayout.js" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.css" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.html" />
+    <Content Include="layouts\SlideOut\SlideOutLayout.js" />
+    <Content Include="layouts\Empty\EmptyLayout.css" />
+    <Content Include="layouts\Empty\EmptyLayout.html" />
+    <Content Include="layouts\Empty\EmptyLayout.js" />
+    <Content Include="layouts\Simple\SimpleLayout.css" />
+    <Content Include="layouts\Simple\SimpleLayout.html" />
+    <Content Include="layouts\Simple\SimpleLayout.js" />
+    <Content Include="layouts\Popup\PopupLayout.css" />
+    <Content Include="layouts\Popup\PopupLayout.html" />
+    <Content Include="layouts\Popup\PopupLayout.js" />
+    <Content Include="layouts\Split\SplitLayout.css" />
+    <Content Include="layouts\Split\SplitLayout.html" />
+    <Content Include="layouts\Split\SplitLayout.js" />
+    <Content Include="views\clientes.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\clientes.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\inicio.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\inicio.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\liberacao.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\liberacao.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\liberacaoDetalhe.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\liberacaoDetalhe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\login.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\login.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\pedidoDetalhe.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\pedidoDetalhe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\pedidos.dxview">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="views\pedidos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="Resources\PackageIcons.Android.ic_launcher_36_36.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_48_48.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_72_72.png" />
+    <None Include="Resources\PackageIcons.Android.ic_launcher_96_96.png" />
+    <None Include="Resources\PackageIcons.Android.splash_200_320.png" />
+    <None Include="Resources\PackageIcons.Android.splash_320_480.png" />
+    <None Include="Resources\PackageIcons.Android.splash_480_800.png" />
+    <None Include="Resources\PackageIcons.Android.splash_720_1280.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon29x29.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon40x40~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon50x50%402x~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.AppIcon50x50~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default%402x~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-568h%402x~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-667h.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Portrait%402x~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default-Portrait~ipad.png" />
+    <None Include="Resources\PackageIcons.iOS.Default~iphone.png" />
+    <None Include="Resources\PackageIcons.iOS.icon%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60%403x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-60.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-72%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-72.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-76%402x.png" />
+    <None Include="Resources\PackageIcons.iOS.icon-76.png" />
+    <None Include="Resources\PackageIcons.iOS.icon.png" />
+    <None Include="Resources\PackageIcons.iOS.iTunesArtwork.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="certificates\" />
+    <Folder Include="css\" />
+    <Folder Include="js\" />
+    <Folder Include="layouts\" />
+    <Folder Include="layouts\Empty\" />
+    <Folder Include="layouts\Navbar\" />
+    <Folder Include="layouts\Pivot\" />
+    <Folder Include="layouts\Popup\" />
+    <Folder Include="layouts\Simple\" />
+    <Folder Include="layouts\SlideOut\" />
+    <Folder Include="layouts\Split\" />
+    <Folder Include="Resources\" />
+    <Folder Include="views\" />
+    <Folder Include="views\relatoriosCliente" />
+    <Folder Include="views\relatorios" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppPedidos4tAvi.Shared\AppPedidos4tAvi.Shared.dxjsproj">
+      <Name>AppPedidos4tAvi.Shared</Name>
+      <Project>{0e3020a0-f0bb-4595-b443-af2c35c929a8}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <Target Name="ResolveReferences">
+    <Message Text="Copying references to output dir..." Importance="high" />
+    <MSBuild Targets="Build" Projects="@(ProjectReference)" Properties="OutputPath=$([System.IO.Path]::GetFullPath('$(OutputPath)'))">
+    </MSBuild>
+  </Target>
+  <Target Name="CopyFilesToOutputDirectory">
+    <Message Text="Copying files to output dir..." Importance="high" />
+    <Copy SourceFiles="@(Content)" DestinationFiles="@(Content-&gt;'$(OutputPath)$([MSBuild]::MakeRelative($(MSBuildProjectDirectory),'%(FullPath)'))')" />
+  </Target>
+  <Target Name="CoreCompile">
+    <!--<Message Text="'$(MSBuildToolsPath)'"></Message>-->
+    <!--<Message Text="'$(BuildingProject)'"></Message>-->
+    <!--<Message Text="Build JSProject '$(MSBuildProjectFile)':" Importance="high"></Message>-->
+    <!--<Message Text="Finished Build JSProject '$(MSBuildProjectFile)'." Importance="high"></Message>-->
+  </Target>
+  <Target Name="CreateManifestResourceNames" Condition="'@(ResxWithNoCulture)@(ResxWithCulture)@(NonResxWithNoCulture)@(NonResxWithCulture)'!=''" />
+  <Target Name="Clean">
+    <!--
+    <Message Text="Cleaning Output files..." Importance="high" />
+    <Delete Files="@([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+    -->
+    <Message Text="Cleaning Output dir ($([System.IO.Path]::GetFullPath('$(OutputPath)')))..." Importance="high" />
+    <RemoveDir Directories="$([System.IO.Path]::GetFullPath('$(OutputPath)'))" />
+  </Target>
+</Project>
